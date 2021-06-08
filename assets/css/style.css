@@ -1,0 +1,502 @@
+/* Reset css */
+*{
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Them z index vao header va cho body 1 magrin top bang chieu cau cua header */
+
+.Header{
+height:54px;
+width: 100%;
+background-color:#F4F4F4 ;
+line-height: 54px;
+position: fixed;
+top: 0;
+z-index: 1;
+box-shadow: 3px 3px 3px  rgb(151, 148, 148);
+}
+
+.Header-icon{
+    width: 65px;
+    height: 36px;
+    text-align: center;
+    margin: auto 10px;
+    display: none;
+    right: 10px;
+}
+.Header-icon-item{
+    font-size: 36px;
+   
+}
+
+/* DAY CHINH LLA BAM VAO DE HIEN HOAC AN CAI THE INPUT */
+.input-check:checked ~ .overlay{  
+    display: block;
+}    
+/* DAY CHINH LLA BAM VAO DE HIEN HOAC AN CAI THE INPUT */
+.input-check:checked ~ .Header_left-mobile{  
+    transform:translateX(0%);
+    opacity: 1;  /* hieu ung m dan cho thanh ben phai*/
+}    
+
+
+@media  (max-width: 1023px){
+    .Header-icon{
+        display: block;
+    }
+    .Header_left{
+        display: none;
+    }
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    display: none;
+    animation: fadeIn linear 0.2s;  /***********/
+}
+
+@keyframes fadeIn {    /*tao hieu ung cho overlay*/
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.Header_left-mobile{
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+width: 320px;
+background-color: rgb(255, 255, 255);
+max-width: 100%;
+transform:translateX(100%);
+opacity: 0;
+transition: transform linear 0.2s,opacity linear 0s;  /* hieu ung truot cua thanh cong cu*/
+
+}
+
+.input-check{
+    display: none;
+}
+.topic-mobile-icon{
+    font-size: 34px;
+    margin-right: 20px;
+    line-height: 54px;
+}
+.icon-close{
+    display: block;
+    text-align: right;
+}
+.topic-mobile{
+padding-left: 20px;
+text-decoration: none;
+color: black;
+display: block;
+border-top: 1px solid rgb(231, 231, 231);
+}
+
+
+.topic-mobile:hover{
+    background-color: rgb(206, 205, 204);
+}
+
+
+.Header_Build{
+display: flex;
+justify-content: space-between;
+
+}
+.topic{
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    font-family: Verdana,sans-serif;
+}
+
+.topic:hover{
+    color: rgb(255, 0, 0);
+}
+
+/* Body */
+.Body_1{
+    width: 100%;
+    height: 974 px;
+    position: relative;
+
+    margin-top: 54px;
+    padding: 0px 0px 64px 0px;
+}
+
+.image_1{
+    width: 100%;
+    
+}
+
+.Body_1-text{
+    position: absolute;
+    bottom: 50%;
+    color:white;
+    font-size: 48px;
+    /* left:120px; */
+    left:10%;
+   font-weight: 800;
+   text-align: center;
+}
+
+/* BODY */
+
+.Body_2{
+    display: flex;  
+  
+    padding: 64px 0;
+    border-top: 1px solid #eee;  
+}
+.image_2{
+width: 45%; 
+height: auto;
+
+padding: 12px 24px;
+border: 1x solid white;
+border-radius: 40px;
+
+}
+
+.Body_2-text{
+    width: 55%;
+    font-size: 24PX;
+    padding: 12px 24px;
+    text-align: center;   /* can giua cho chu */
+}
+
+.Body_2-text-1{
+    font-family: Verdana,sans-serif;
+    font-size: 36px;
+}
+
+.Body_2-text-2{
+    line-height: 36px;
+    margin-top: 36px;
+}
+
+.Body_2-text-build-2{
+    margin-top: 64px;
+}
+
+.Body_3{
+    
+    display: flex;  
+    padding: 64px 0;
+    border-top: 1px solid #eee;  /*Tao duong vien giua 2 body */
+}
+
+
+.img-contact-one{
+    width: 100%;
+}
+
+.img-contact{
+    width: 100%;
+}
+
+.Contact{
+ width: 100%;
+ padding: 64px 16px;
+ border-top: 1px solid #eee;  /*Tao duong vien giua 2 body */
+
+}
+
+.Contact-text1{
+   padding: 10px;
+    font-size: 42px;
+   
+}
+
+.Contact-text2-text{
+    padding: 6px 10px;
+    font-size: 18px;
+}
+
+.action{
+    margin:auto;
+}
+.action-text{
+    margin-left: 16px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width:80%;
+   outline: none;   
+}
+
+.action-button{
+    margin-top: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-left: 16px;
+    border: none;
+    box-shadow: 3px 3px 3px rgb(158, 152, 152);
+}
+
+.action-button:hover{
+    background-color: rgb(199, 196, 196);
+}
+
+
+.End{
+    width: 100%;
+    height: 116px;
+    background-color: #F1F1F1;
+}
+
+.End-text{
+    font-size: 40px;
+    line-height: 116px;
+    text-align: center;
+    font-family: Verdana,sans-serif;
+    color: rgb(190, 190, 190);
+}
+
+/*----------------------------------------------------- REPONSIZE --------------------------------------------------------------*/
+/* Mobile phone  width , 740px */
+@media only screen and (max-width: 739px){
+   
+    .Body_3,
+    .Body_2{
+        flex-direction: column;  /*lam cho flex thanh hang doc*/
+    }
+
+.Body_2-text,   
+.image_2{
+    width: 100%;
+}
+
+.Body_1-text{
+    font-size: 24px;
+}
+.topic{
+    font-size: 8px;
+}
+
+
+}
+
+
+/* Tablet  width >=740px and width <1024px*/
+
+@media only screen and (min-width: 740px) and (max-width: 1024px){
+   
+    .Body_3,
+    .Body_2{
+        flex-direction: column;  /*lam cho flex thanh hang doc*/
+    }
+
+.Body_2-text,   
+.image_2{
+    width: 100%;
+    
+}
+.Body_1-text{
+    font-size: 36px;
+}
+.topic{
+    font-size: 14px;
+}
+
+
+}
+
+/* Mobile & Tablet width < 1024px*/
+
+/*----------------------------------------------------- REPONSIZE --------------------------------------------------------------*/
+
+.infor{
+    margin-top: 24px;
+}
+
+.my_infor{
+    font-size: 28px;
+    padding-left: 16px;
+    color: rgb(18, 92, 189);
+    margin: 8px 0px;
+}
+
+.infor-text{
+    padding-left: 12px;
+    font-size: 20px;
+    color: black;
+}
+
+.option{
+    display: flex;
+    margin: 12px;
+    background-color: rgb(247, 243, 243);
+    flex-wrap: wrap;   /*co cai nay thi flex moi co 2 ohan tu tren cung 1 dong*/
+}
+
+.option-item{
+    background-color: rgb(235, 234, 231);
+    width: 49%;
+    padding: 18px 9px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px rgb(199, 197, 197);
+
+    text-align: center;
+}
+/*----------------------------------------REPONSIZE  of  OPTION ------------------------------------------------------------------/*/
+/* Tablet  width >=740px and width <1024px*/
+@media only screen and (min-width: 740px) and (max-width: 1024px){
+    .option-item{
+        width: 48%;
+    }
+
+}
+
+/* Mobile phone  width , 740px */
+@media only screen and (max-width: 739px){
+
+    .option-item{
+        width: 100%;
+    }
+
+}
+.option-img{
+    width: 100%;
+    
+}
+
+.option-name{
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    position: absolute;
+    font-weight: bold;
+    letter-spacing: 2px;  /*dan cach cac ki tu trong chu*/
+    bottom: 30%;
+    right: 40%;
+    transition: linear 0.3s;
+    opacity: 0;
+    
+}
+
+.option-item:hover .option-name{
+    bottom: 60%;
+    opacity: 1;
+}
+
+.option-text{
+padding: 16px 0px;
+font-size: 24px;
+text-align: center;
+}
+
+.option-button{
+    font-size: 18px;
+    border: none;
+    box-shadow: 3px 3px 2px rgb(156, 155, 155);
+    background-color: rgb(248, 58, 58);
+    line-height: 24px;
+    width: 100px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.option-button:hover{
+    opacity: 0.8;
+}
+.more-option{
+    border-top: 1px solid #eee;  /*Tao duong vien giua 2 body */
+   padding: 64px 64px;
+}
+
+
+
+.Item{
+    border-top: 1px solid #eee;  /*Tao duong vien giua 2 body */
+    background-color: rgb(255, 255, 255);
+    padding: 64px 64px;
+    
+}
+
+.Item-option{
+    
+    font-size: 36px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.My-item{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px;
+    background-color: #F7F3F3;
+    justify-content: center;
+}
+.My-item-one{
+    width: 31%;
+    margin: 10px;
+
+    /* Lam cho anh khong tran ra ngoai, overflow vao the to chua anh */
+    overflow: hidden;
+    position: relative;
+
+}
+.My-item-one-img{
+    width: 100%;
+}
+
+/*----------------------------------------REPONSIZE  of  ITEM ------------------------------------------------------------------/*/
+/* Tablet  width >=740px and width <1024px*/
+@media only screen and (min-width: 740px) and (max-width: 1024px){
+    .My-item-one{
+        width: 47%;
+    }
+
+}
+
+/* Mobile phone  width , 740px */
+@media only screen and (max-width: 739px){
+
+    .My-item-one{
+        width: 41%;
+    }
+
+}
+
+/*------------------------------------------- TAO HIEU UNG PHONG TO ANH-------------------------------------------------------- */
+ 
+/* Hieu ung phong to anh */
+.option-item:hover img{
+    transform: scale(1.05);
+    transition: linear 0.3s; 
+    opacity: 0.8;
+}
+
+/* Lam cho anh khong tran ra ngoai, overflow vao the to chua anh */
+.option-item{   
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*------------------------------------------- TAO HIEU UNG PHONG TO ANH-------------------------------------------------------- */
+
+/* Hieu ung phong to anh */
+.My-item-one:hover img{
+    transform: scale(1.1);
+    transition: linear 0.3s; 
+    opacity: 0.8;
+}
+
